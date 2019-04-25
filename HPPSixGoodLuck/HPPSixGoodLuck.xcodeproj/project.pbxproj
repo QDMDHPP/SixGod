@@ -1,0 +1,601 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AEEF4583226C9BB100BF182E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEF4582226C9BB100BF182E /* AppDelegate.m */; };
+		AEEF4586226C9BB100BF182E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEF4585226C9BB100BF182E /* ViewController.m */; };
+		AEEF4589226C9BB200BF182E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEEF4587226C9BB200BF182E /* Main.storyboard */; };
+		AEEF458C226C9BB200BF182E /* HPPSixGoodLuck.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AEEF458A226C9BB200BF182E /* HPPSixGoodLuck.xcdatamodeld */; };
+		AEEF458E226C9BB600BF182E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEEF458D226C9BB600BF182E /* Assets.xcassets */; };
+		AEEF4591226C9BB600BF182E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEEF458F226C9BB600BF182E /* LaunchScreen.storyboard */; };
+		AEEF4594226C9BB600BF182E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEF4593226C9BB600BF182E /* main.m */; };
+		AEEF459E226C9BB600BF182E /* HPPSixGoodLuckTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEF459D226C9BB600BF182E /* HPPSixGoodLuckTests.m */; };
+		AEEF45A9226C9BB600BF182E /* HPPSixGoodLuckUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEF45A8226C9BB600BF182E /* HPPSixGoodLuckUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AEEF459A226C9BB600BF182E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AEEF4576226C9BB100BF182E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AEEF457D226C9BB100BF182E;
+			remoteInfo = HPPSixGoodLuck;
+		};
+		AEEF45A5226C9BB600BF182E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AEEF4576226C9BB100BF182E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AEEF457D226C9BB100BF182E;
+			remoteInfo = HPPSixGoodLuck;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AEEF457E226C9BB100BF182E /* HPPSixGoodLuck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HPPSixGoodLuck.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEEF4581226C9BB100BF182E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AEEF4582226C9BB100BF182E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AEEF4584226C9BB100BF182E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		AEEF4585226C9BB100BF182E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AEEF4588226C9BB200BF182E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AEEF458B226C9BB200BF182E /* HPPSixGoodLuck.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HPPSixGoodLuck.xcdatamodel; sourceTree = "<group>"; };
+		AEEF458D226C9BB600BF182E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AEEF4590226C9BB600BF182E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AEEF4592226C9BB600BF182E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEEF4593226C9BB600BF182E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AEEF4599226C9BB600BF182E /* HPPSixGoodLuckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HPPSixGoodLuckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEEF459D226C9BB600BF182E /* HPPSixGoodLuckTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPPSixGoodLuckTests.m; sourceTree = "<group>"; };
+		AEEF459F226C9BB600BF182E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEEF45A4226C9BB600BF182E /* HPPSixGoodLuckUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HPPSixGoodLuckUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEEF45A8226C9BB600BF182E /* HPPSixGoodLuckUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPPSixGoodLuckUITests.m; sourceTree = "<group>"; };
+		AEEF45AA226C9BB600BF182E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AEEF457B226C9BB100BF182E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEEF4596226C9BB600BF182E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEEF45A1226C9BB600BF182E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AEEF4575226C9BB100BF182E = {
+			isa = PBXGroup;
+			children = (
+				AEEF4580226C9BB100BF182E /* HPPSixGoodLuck */,
+				AEEF459C226C9BB600BF182E /* HPPSixGoodLuckTests */,
+				AEEF45A7226C9BB600BF182E /* HPPSixGoodLuckUITests */,
+				AEEF457F226C9BB100BF182E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AEEF457F226C9BB100BF182E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AEEF457E226C9BB100BF182E /* HPPSixGoodLuck.app */,
+				AEEF4599226C9BB600BF182E /* HPPSixGoodLuckTests.xctest */,
+				AEEF45A4226C9BB600BF182E /* HPPSixGoodLuckUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AEEF4580226C9BB100BF182E /* HPPSixGoodLuck */ = {
+			isa = PBXGroup;
+			children = (
+				AEEF4581226C9BB100BF182E /* AppDelegate.h */,
+				AEEF4582226C9BB100BF182E /* AppDelegate.m */,
+				AEEF4584226C9BB100BF182E /* ViewController.h */,
+				AEEF4585226C9BB100BF182E /* ViewController.m */,
+				AEEF4587226C9BB200BF182E /* Main.storyboard */,
+				AEEF458D226C9BB600BF182E /* Assets.xcassets */,
+				AEEF458F226C9BB600BF182E /* LaunchScreen.storyboard */,
+				AEEF4592226C9BB600BF182E /* Info.plist */,
+				AEEF4593226C9BB600BF182E /* main.m */,
+				AEEF458A226C9BB200BF182E /* HPPSixGoodLuck.xcdatamodeld */,
+			);
+			path = HPPSixGoodLuck;
+			sourceTree = "<group>";
+		};
+		AEEF459C226C9BB600BF182E /* HPPSixGoodLuckTests */ = {
+			isa = PBXGroup;
+			children = (
+				AEEF459D226C9BB600BF182E /* HPPSixGoodLuckTests.m */,
+				AEEF459F226C9BB600BF182E /* Info.plist */,
+			);
+			path = HPPSixGoodLuckTests;
+			sourceTree = "<group>";
+		};
+		AEEF45A7226C9BB600BF182E /* HPPSixGoodLuckUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AEEF45A8226C9BB600BF182E /* HPPSixGoodLuckUITests.m */,
+				AEEF45AA226C9BB600BF182E /* Info.plist */,
+			);
+			path = HPPSixGoodLuckUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AEEF457D226C9BB100BF182E /* HPPSixGoodLuck */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEEF45AD226C9BB600BF182E /* Build configuration list for PBXNativeTarget "HPPSixGoodLuck" */;
+			buildPhases = (
+				AEEF457A226C9BB100BF182E /* Sources */,
+				AEEF457B226C9BB100BF182E /* Frameworks */,
+				AEEF457C226C9BB100BF182E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HPPSixGoodLuck;
+			productName = HPPSixGoodLuck;
+			productReference = AEEF457E226C9BB100BF182E /* HPPSixGoodLuck.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AEEF4598226C9BB600BF182E /* HPPSixGoodLuckTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEEF45B0226C9BB600BF182E /* Build configuration list for PBXNativeTarget "HPPSixGoodLuckTests" */;
+			buildPhases = (
+				AEEF4595226C9BB600BF182E /* Sources */,
+				AEEF4596226C9BB600BF182E /* Frameworks */,
+				AEEF4597226C9BB600BF182E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AEEF459B226C9BB600BF182E /* PBXTargetDependency */,
+			);
+			name = HPPSixGoodLuckTests;
+			productName = HPPSixGoodLuckTests;
+			productReference = AEEF4599226C9BB600BF182E /* HPPSixGoodLuckTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AEEF45A3226C9BB600BF182E /* HPPSixGoodLuckUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEEF45B3226C9BB600BF182E /* Build configuration list for PBXNativeTarget "HPPSixGoodLuckUITests" */;
+			buildPhases = (
+				AEEF45A0226C9BB600BF182E /* Sources */,
+				AEEF45A1226C9BB600BF182E /* Frameworks */,
+				AEEF45A2226C9BB600BF182E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AEEF45A6226C9BB600BF182E /* PBXTargetDependency */,
+			);
+			name = HPPSixGoodLuckUITests;
+			productName = HPPSixGoodLuckUITests;
+			productReference = AEEF45A4226C9BB600BF182E /* HPPSixGoodLuckUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AEEF4576226C9BB100BF182E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = HPP;
+				TargetAttributes = {
+					AEEF457D226C9BB100BF182E = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					AEEF4598226C9BB600BF182E = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = AEEF457D226C9BB100BF182E;
+					};
+					AEEF45A3226C9BB600BF182E = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = AEEF457D226C9BB100BF182E;
+					};
+				};
+			};
+			buildConfigurationList = AEEF4579226C9BB100BF182E /* Build configuration list for PBXProject "HPPSixGoodLuck" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AEEF4575226C9BB100BF182E;
+			productRefGroup = AEEF457F226C9BB100BF182E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AEEF457D226C9BB100BF182E /* HPPSixGoodLuck */,
+				AEEF4598226C9BB600BF182E /* HPPSixGoodLuckTests */,
+				AEEF45A3226C9BB600BF182E /* HPPSixGoodLuckUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AEEF457C226C9BB100BF182E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEEF4591226C9BB600BF182E /* LaunchScreen.storyboard in Resources */,
+				AEEF458E226C9BB600BF182E /* Assets.xcassets in Resources */,
+				AEEF4589226C9BB200BF182E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEEF4597226C9BB600BF182E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEEF45A2226C9BB600BF182E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AEEF457A226C9BB100BF182E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEEF4586226C9BB100BF182E /* ViewController.m in Sources */,
+				AEEF4583226C9BB100BF182E /* AppDelegate.m in Sources */,
+				AEEF4594226C9BB600BF182E /* main.m in Sources */,
+				AEEF458C226C9BB200BF182E /* HPPSixGoodLuck.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEEF4595226C9BB600BF182E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEEF459E226C9BB600BF182E /* HPPSixGoodLuckTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEEF45A0226C9BB600BF182E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEEF45A9226C9BB600BF182E /* HPPSixGoodLuckUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AEEF459B226C9BB600BF182E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AEEF457D226C9BB100BF182E /* HPPSixGoodLuck */;
+			targetProxy = AEEF459A226C9BB600BF182E /* PBXContainerItemProxy */;
+		};
+		AEEF45A6226C9BB600BF182E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AEEF457D226C9BB100BF182E /* HPPSixGoodLuck */;
+			targetProxy = AEEF45A5226C9BB600BF182E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AEEF4587226C9BB200BF182E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AEEF4588226C9BB200BF182E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AEEF458F226C9BB600BF182E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AEEF4590226C9BB600BF182E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AEEF45AB226C9BB600BF182E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AEEF45AC226C9BB600BF182E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AEEF45AE226C9BB600BF182E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = HPPSixGoodLuck/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.SixGoodLuck.hpp.HPPSixGoodLuck;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AEEF45AF226C9BB600BF182E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = HPPSixGoodLuck/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.SixGoodLuck.hpp.HPPSixGoodLuck;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AEEF45B1226C9BB600BF182E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HPPSixGoodLuckTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.SixGoodLuck.hpp.HPPSixGoodLuckTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HPPSixGoodLuck.app/HPPSixGoodLuck";
+			};
+			name = Debug;
+		};
+		AEEF45B2226C9BB600BF182E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HPPSixGoodLuckTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.SixGoodLuck.hpp.HPPSixGoodLuckTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HPPSixGoodLuck.app/HPPSixGoodLuck";
+			};
+			name = Release;
+		};
+		AEEF45B4226C9BB600BF182E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HPPSixGoodLuckUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.SixGoodLuck.hpp.HPPSixGoodLuckUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HPPSixGoodLuck;
+			};
+			name = Debug;
+		};
+		AEEF45B5226C9BB600BF182E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HPPSixGoodLuckUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.SixGoodLuck.hpp.HPPSixGoodLuckUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HPPSixGoodLuck;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AEEF4579226C9BB100BF182E /* Build configuration list for PBXProject "HPPSixGoodLuck" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEEF45AB226C9BB600BF182E /* Debug */,
+				AEEF45AC226C9BB600BF182E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AEEF45AD226C9BB600BF182E /* Build configuration list for PBXNativeTarget "HPPSixGoodLuck" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEEF45AE226C9BB600BF182E /* Debug */,
+				AEEF45AF226C9BB600BF182E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AEEF45B0226C9BB600BF182E /* Build configuration list for PBXNativeTarget "HPPSixGoodLuckTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEEF45B1226C9BB600BF182E /* Debug */,
+				AEEF45B2226C9BB600BF182E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AEEF45B3226C9BB600BF182E /* Build configuration list for PBXNativeTarget "HPPSixGoodLuckUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEEF45B4226C9BB600BF182E /* Debug */,
+				AEEF45B5226C9BB600BF182E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AEEF458A226C9BB200BF182E /* HPPSixGoodLuck.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AEEF458B226C9BB200BF182E /* HPPSixGoodLuck.xcdatamodel */,
+			);
+			currentVersion = AEEF458B226C9BB200BF182E /* HPPSixGoodLuck.xcdatamodel */;
+			path = HPPSixGoodLuck.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = AEEF4576226C9BB100BF182E /* Project object */;
+}
