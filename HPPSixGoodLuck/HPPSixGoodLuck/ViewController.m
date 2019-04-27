@@ -38,14 +38,39 @@
                              @"29",@"15",@"47",@"21",@"11",
                              @"40",@"31",@"49",@"36",@"49",
                              @"36",@"33",@"39",@"34",@"23",
-                             @"19"];
-    [self oneNumberWithOpenNumbers:openNumbers];
-    [self numbersWithOpenNumbers:openNumbers];
-    [self animalsWithOpenNumber:openNumbers];
+                             @"19",@"04"];
+//    [self oneNumberWithOpenNumbers:openNumbers];
+//    [self numbersWithOpenNumbers:openNumbers];
+//    [self animalsWithOpenNumber:openNumbers];
     [self numbersWithOpenNumbers:openNumbers numbersIntervalLength:5];
     
 }
 - (void)getMoneyDeadlinewNumber:(NSInteger)DeadlinewNumber{
+    
+}
+
+- (void)numbersWithOpenNumbers:(NSArray *)openNumbers numbersIntervalLength:(NSInteger)length{
+    
+    NSMutableArray *key = [[NSMutableArray alloc] init];
+    for (int i = 1; i <= 49; i ++ ) {
+        NSInteger endNumber = i+length-1;
+        if (endNumber <= 49) {
+            [key addObject:[NSString stringWithFormat:@"%d-%ld",i,endNumber]];
+        }
+    }
+    NSMutableDictionary *endNumbers = [[NSMutableDictionary alloc] init];
+    [key enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [endNumbers setObject:@(0) forKey:obj];
+    }];
+//    [openNumbers enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+//        NSString *openNumber = obj;
+//        [endNumbers enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+//            NSString *numberKey = key;
+//            NSArray *numberKeys = [numberKey s];
+//            NSLog(@"%@",numberKeys);
+//        }];
+//    }];
+    NSLog(@"%@",endNumbers);
     
 }
 
@@ -172,9 +197,7 @@
     NSString *str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
      NSLog(@"endNumbers = %@",str);
 }
-- (void)numbersWithOpenNumbers:(NSArray *)openNumbers numbersIntervalLength:(NSInteger)length{
-    
-}
+
 - (void)numbersWithOpenNumbers:(NSArray *)openNumbers{
     NSArray *values = @[@(0),@(0),@(0),@(0),@(0),@(0),@(0),@(0),@(0),@(0)];
     NSArray *keys = @[@"1-5",@"6-10",@"11-15",@"16-20",@"21-25",@"26-30",@"31-35",@"36-40",@"41-45",@"46-49"];
