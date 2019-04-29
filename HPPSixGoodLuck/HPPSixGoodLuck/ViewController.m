@@ -62,14 +62,14 @@
     [key enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         [endNumbers setObject:@(0) forKey:obj];
     }];
-//    [openNumbers enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-//        NSString *openNumber = obj;
-//        [endNumbers enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
-//            NSString *numberKey = key;
-//            NSArray *numberKeys = [numberKey s];
-//            NSLog(@"%@",numberKeys);
-//        }];
-//    }];
+    [openNumbers enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSString *openNumber = obj;
+        [endNumbers enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+            NSString *numberKey = key;
+            NSArray *numberKeys = [numberKey componentsSeparatedByString:@"-"];
+            NSLog(@"%@",numberKeys);
+        }];
+    }];
     NSLog(@"%@",endNumbers);
     
 }
