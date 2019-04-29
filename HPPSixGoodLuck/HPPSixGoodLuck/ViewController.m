@@ -42,7 +42,7 @@
 //    [self oneNumberWithOpenNumbers:openNumbers];
 //    [self numbersWithOpenNumbers:openNumbers];
 //    [self animalsWithOpenNumber:openNumbers];
-    [self numbersWithOpenNumbers:openNumbers numbersIntervalLength:5];
+    [self numbersWithOpenNumbers:openNumbers numbersIntervalLength:3];
     
 }
 - (void)getMoneyDeadlinewNumber:(NSInteger)DeadlinewNumber{
@@ -62,12 +62,23 @@
     [key enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         [endNumbers setObject:@(0) forKey:obj];
     }];
+    NSArray *keys = [endNumbers allKeys].mutableCopy;
     [openNumbers enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         NSString *openNumber = obj;
-        [endNumbers enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
-            NSString *numberKey = key;
+        [keys enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            NSString *numberKey = obj;
             NSArray *numberKeys = [numberKey componentsSeparatedByString:@"-"];
-            NSLog(@"%@",numberKeys);
+            NSInteger minNumber = [numberKeys.firstObject integerValue];
+            NSInteger maxNumber = [numberKeys.lastObject integerValue];
+            NSInteger openIntNumber = [openNumber integerValue];
+            if (openIntNumber >= minNumber && openIntNumber <= maxNumber) {
+                [endNumbers setObject:@(0) forKey:numberKey];
+            }else{
+                NSInteger end = [[endNumbers objectForKey:numberKey] integerValue];
+                end ++ ;
+                [endNumbers setObject:@(end) forKey:numberKey];
+            }
+            
         }];
     }];
     NSLog(@"%@",endNumbers);
