@@ -38,7 +38,8 @@
                              @"29",@"15",@"47",@"21",@"11",
                              @"40",@"31",@"49",@"36",@"49",
                              @"36",@"33",@"39",@"34",@"23",
-                             @"19",@"04",@"05"];
+                             @"19",@"04",@"05",@"49",@"43",
+                             @"22",@"02"];
     [self oneNumberWithOpenNumbers:openNumbers];
     [self numbersWithOpenNumbers:openNumbers];
     [self animalsWithOpenNumber:openNumbers];
