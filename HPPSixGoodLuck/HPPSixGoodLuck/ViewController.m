@@ -39,11 +39,12 @@
                              @"40",@"31",@"49",@"36",@"49",
                              @"36",@"33",@"39",@"34",@"23",
                              @"19",@"04",@"05",@"49",@"43",
-                             @"22",@"02"];
+                             @"22",@"02",@"05",@"34",@"35"];
     [self oneNumberWithOpenNumbers:openNumbers];
     [self numbersWithOpenNumbers:openNumbers];
+    [self numbersWithOpenTenNumbers:openNumbers];
     [self animalsWithOpenNumber:openNumbers];
-    [self numbersWithOpenNumbers:openNumbers numbersIntervalLength:5];
+    [self numbersWithOpenNumbers:openNumbers numbersIntervalLength:10];
     
 }
 - (void)getMoneyDeadlinewNumber:(NSInteger)DeadlinewNumber{
@@ -237,6 +238,38 @@
             superKey = @"41-45";
         }else{
             superKey = @"46-49";
+        }
+        [keys enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            NSString *key = [NSString stringWithFormat:@"%@",obj];
+            NSInteger end = [[endNumbers objectForKey:key] integerValue];
+            if ([superKey isEqualToString:key]) {
+                end = 0;
+            }else{
+                end ++ ;
+            }
+            [endNumbers setObject:@(end) forKey:key];
+        }];
+    }];
+    NSLog(@"endNumbers = %@",endNumbers);
+}
+
+- (void)numbersWithOpenTenNumbers:(NSArray *)openNumbers{
+    NSArray *values = @[@(0),@(0),@(0),@(0),@(0)];
+    NSArray *keys = @[@"01-10",@"11-20",@"21-30",@"31-40",@"41-49"];
+    NSMutableDictionary *endNumbers = [[NSMutableDictionary alloc] initWithObjects:values forKeys:keys];
+    [openNumbers enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSInteger currentNumber = [obj integerValue];
+        NSString *superKey = @"";
+        if (currentNumber <= 10 ) {
+            superKey = @"01-10";
+        }else if (currentNumber>10 && currentNumber <= 20){
+            superKey = @"11-20";
+        }else if (currentNumber>20 && currentNumber <= 30){
+            superKey = @"21-30";
+        }else if (currentNumber>30 && currentNumber <= 40){
+            superKey = @"31-40";
+        }else if (currentNumber>40 && currentNumber <= 49){
+            superKey = @"41-49";
         }
         [keys enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             NSString *key = [NSString stringWithFormat:@"%@",obj];
