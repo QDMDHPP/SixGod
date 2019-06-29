@@ -41,12 +41,13 @@
                              @"19",@"04",@"05",@"49",@"43",
                              @"22",@"02",@"05",@"34",@"35",
                              @"18",@"27",@"01",@"47",@"03",
-                             @"26",@"48",@"38",@"44"];
+                             @"26",@"48",@"38",@"44",@"13",
+                             @"45",@"24",@"36",@"46",@"16"];
     [self oneNumberWithOpenNumbers:openNumbers];
     [self numbersWithOpenNumbers:openNumbers];
     [self numbersWithOpenTenNumbers:openNumbers];
     [self animalsWithOpenNumber:openNumbers];
-    [self numbersWithOpenNumbers:openNumbers numbersIntervalLength:12];
+    [self numbersWithOpenNumbers:openNumbers numbersIntervalLength:7];
     
 }
 - (void)getMoneyDeadlinewNumber:(NSInteger)DeadlinewNumber{
