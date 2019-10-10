@@ -16,6 +16,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    NSArray * array1 = [[NSArray alloc] init];
+//    NSArray * array2 = [[NSArray alloc] init];
+//    NSArray * array3 = [[NSArray alloc] init];
+//    NSArray * array4 = [[NSArray alloc] init];
+//    NSArray * array5 = [[NSArray alloc] init];
+//    NSMutableArray *mutableArray = [[NSMutableArray alloc] initWithObjects:array1,array2,array3,array4,array5, nil];
+//    NSArray *copyArray = [mutableArray copy];
+    
+//    NSArray *array = @[array1,array2,array3,array4,array5];
+//    NSLog(@"mutableArray = %p",mutableArray);
+//    NSLog(@"copyArray = %p",copyArray);
+//    for (id obj in mutableArray) {
+//        NSLog(@"obj = %p",obj);
+//    }
+//    for (id copyObj in copyArray) {
+//        NSLog(@"copyObj = %p",copyObj);
+//    }
+    
     NSArray *openNumbers = @[//2018
                              @"34",@"27",@"02",@"13",@"37",
                              @"13",@"47",@"33",@"37",@"35",
@@ -42,13 +60,21 @@
                              @"22",@"02",@"05",@"34",@"35",
                              @"18",@"27",@"01",@"47",@"03",
                              @"26",@"48",@"38",@"44",@"13",
-                             @"45",@"24",@"36",@"46",@"16"];
+                             @"45",@"24",@"36",@"46",@"16",
+                             @"13",@"27",@"45",@"02",@"14",
+                             @"29",@"25",@"29",@"16",@"13",
+                             @"19",@"37",@"46",@"08",@"29",
+                             @"30",@"16",@"36",@"37",@"06",
+                             @"11",@"17",@"11",@"02",@"08",
+                             @"13",@"16",@"18",@"05",@"10",
+                             @"39",@"13",@"47",@"07",@"43",
+                             @"02",@"07",@"37",@"41",@"04",
+                             @"33",@"44",@"16"];
     [self oneNumberWithOpenNumbers:openNumbers];
     [self numbersWithOpenNumbers:openNumbers];
     [self numbersWithOpenTenNumbers:openNumbers];
     [self animalsWithOpenNumber:openNumbers];
     [self numbersWithOpenNumbers:openNumbers numbersIntervalLength:7];
-    
 }
 - (void)getMoneyDeadlinewNumber:(NSInteger)DeadlinewNumber{
     
