@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AEBF906E237A8B3600FEC2A4 /* data.JSON in Sources */ = {isa = PBXBuildFile; fileRef = AEBF906D237A8B3600FEC2A4 /* data.JSON */; };
+		AEBF906F237A8DD600FEC2A4 /* data.JSON in Resources */ = {isa = PBXBuildFile; fileRef = AEBF906D237A8B3600FEC2A4 /* data.JSON */; };
 		AEEF4583226C9BB100BF182E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEF4582226C9BB100BF182E /* AppDelegate.m */; };
 		AEEF4586226C9BB100BF182E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEF4585226C9BB100BF182E /* ViewController.m */; };
 		AEEF4589226C9BB200BF182E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEEF4587226C9BB200BF182E /* Main.storyboard */; };
@@ -36,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AEBF906D237A8B3600FEC2A4 /* data.JSON */ = {isa = PBXFileReference; explicitFileType = text.json; path = data.JSON; sourceTree = "<group>"; };
 		AEEF457E226C9BB100BF182E /* HPPSixGoodLuck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HPPSixGoodLuck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEEF4581226C9BB100BF182E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AEEF4582226C9BB100BF182E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -113,6 +116,7 @@
 				AEEF4592226C9BB600BF182E /* Info.plist */,
 				AEEF4593226C9BB600BF182E /* main.m */,
 				AEEF458A226C9BB200BF182E /* HPPSixGoodLuck.xcdatamodeld */,
+				AEBF906D237A8B3600FEC2A4 /* data.JSON */,
 			);
 			path = HPPSixGoodLuck;
 			sourceTree = "<group>";
@@ -238,6 +242,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEBF906F237A8DD600FEC2A4 /* data.JSON in Resources */,
 				AEEF4591226C9BB600BF182E /* LaunchScreen.storyboard in Resources */,
 				AEEF458E226C9BB600BF182E /* Assets.xcassets in Resources */,
 				AEEF4589226C9BB200BF182E /* Main.storyboard in Resources */,
@@ -265,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEBF906E237A8B3600FEC2A4 /* data.JSON in Sources */,
 				AEEF4586226C9BB100BF182E /* ViewController.m in Sources */,
 				AEEF4583226C9BB100BF182E /* AppDelegate.m in Sources */,
 				AEEF4594226C9BB600BF182E /* main.m in Sources */,
