@@ -25,13 +25,78 @@
     
 //    [self oneNumberWithOpenNumbers:self.openNumbers];
 //    [self numbersWithOpenNumbers:self.openNumbers];
-//    [self numbersWithOpenTenNumbers:self.openNumbers];
-//    [self animalsWithOpenNumber:self.openNumbers];
-//    [self numbersWithOpenNumbers:self.openNumbers numbersIntervalLength:5];
+    
+    [self numbersWithOpenTenNumbers:self.openNumbers];
+    [self animalsWithOpenNumber:self.openNumbers];
+    [self numbersWithOpenNumbers:self.openNumbers numbersIntervalLength:10];
 }
 
 - (void)hpp_setupUI{
     [self.view addSubview:self.inAllThreeButton];
+}
+
+- (void)fourAllIn{
+    NSMutableArray *allNumberArray = [[NSMutableArray alloc] init];
+    for (int i = 1; i <= 49; i ++) {
+        [allNumberArray addObject:[NSString stringWithFormat:@"%d",i]];
+    }
+//    NSLog(@" (1) %@",allNumberArray);
+
+    NSArray * currentOpenNumber = [[self historyNumbers] lastObject];
+//    NSLog(@" (2) %@",currentOpenNumber);
+    for (NSString *number in currentOpenNumber) {
+        [allNumberArray removeObject:number];
+    }
+//    NSLog(@" (3) %@",allNumberArray);
+
+    NSMutableArray *willOpenNumber = [[NSMutableArray alloc] init];
+    //原理
+
+    //每取一个。减少一个。比如开始是从0～8 取一个后就少一个。
+    for (int i = 0; i < 7; i ++ ) {
+         int index = arc4random() % allNumberArray.count;
+         [willOpenNumber addObject:allNumberArray[index]];
+         [allNumberArray removeObjectAtIndex:index];
+    }
+    NSLog(@" (willOpenNumber) %@",willOpenNumber);
+//    NSLog(@" (5) %@",allNumberArray);
+}
+
+- (void)notOpenAtion{
+    NSLog(@" 开始运算 ");
+    NSMutableArray * allThreeCombinations =  [self.baseNumbers mutableCopy];
+    NSArray *openNumbers = [self.historyNumbers mutableCopy];
+    NSMutableDictionary *results = [[NSMutableDictionary alloc] init];
+    for (int i = 0; i < allThreeCombinations.count ; i ++ ) {
+        [results setValue:@"0" forKey:[NSString stringWithFormat:@"%d",i]];
+    }
+    for (NSMutableArray *subOpenCombinations in openNumbers) {
+        NSMutableArray *subOpenCombinationKeys = [[NSMutableArray alloc] init];
+        for (NSMutableArray *obj in subOpenCombinations) {
+            NSInteger index = [allThreeCombinations indexOfObject:obj];
+            NSString *openKey = [NSString stringWithFormat:@"%ld",(long)index];
+            [subOpenCombinationKeys addObject:openKey];
+        }
+        
+        [results enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+            NSInteger sun = [obj intValue];
+            sun ++ ;
+            NSString *sunStr = [NSString stringWithFormat:@"%ld",(long)sun];
+            [results setValue:sunStr forKey:key];
+        }];
+        
+        [subOpenCombinationKeys enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            [results setValue:@"0" forKey:obj];
+        }];
+        
+    }
+    
+    [results enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+               NSString * unopenCombination = [allThreeCombinations objectAtIndex:[key intValue]];
+            NSLog(@" %@ : %@",unopenCombination,obj);
+    }];
+    
+    NSLog(@" 结束运算 ");
 }
 
 - (void)inAllThreeAtion{
@@ -101,9 +166,6 @@
         
         [results enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
             NSInteger sun = [obj intValue];
-            if([key isEqualToString:@"3074"]){
-                
-            }
             sun ++ ;
             NSString *sunStr = [NSString stringWithFormat:@"%ld",(long)sun];
             [results setValue:sunStr forKey:key];
@@ -125,7 +187,10 @@
 
 #pragma mark button ation
 - (void)inAllThreeButtonAtion{
-    [self inAllThreeAtion];
+//    [self inAllThreeAtion];
+    
+//    [self notOpenAtion];
+    [self fourAllIn];
 }
 
 
@@ -490,7 +555,7 @@
     if(!_inAllThreeButton){
         _inAllThreeButton = [[UIButton alloc] init];
         _inAllThreeButton.frame = CGRectMake( 100,100 , 100, 50);
-        [_inAllThreeButton setTitle:@"三中三" forState:UIControlStateNormal];
+        [_inAllThreeButton setTitle:@"测试" forState:UIControlStateNormal];
         [_inAllThreeButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         _inAllThreeButton.layer.borderColor = [UIColor redColor].CGColor;
         _inAllThreeButton.layer.borderWidth = 1;
@@ -536,9 +601,88 @@
     //2018131
     if(!_historyNumbers){
         _historyNumbers = @[
-//            @[@"",@"",@"",@"",@"",@"",@""],
-//            @[@"",@"",@"",@"",@"",@"",@""],
-//            @[@"",@"",@"",@"",@"",@"",@""],
+            //2018065
+            //2018066
+            @[@"48",@"20",@"01",@"07",@"21",@"35",@"22"],
+            @[@"07",@"42",@"02",@"31",@"21",@"33",@"24"],
+            @[@"33",@"16",@"31",@"24",@"23",@"34",@"18"],
+            @[@"16",@"46",@"18",@"02",@"09",@"24",@"47"],
+            @[@"08",@"17",@"07",@"42",@"12",@"33",@"26"],
+            //2018070
+            //2018071
+            @[@"06",@"45",@"38",@"29",@"23",@"13",@"41"],
+            @[@"16",@"06",@"05",@"30",@"18",@"32",@"27"],
+            @[@"22",@"49",@"03",@"45",@"21",@"41",@"10"],
+            @[@"34",@"40",@"13",@"01",@"38",@"20",@"29"],
+            @[@"08",@"40",@"26",@"46",@"20",@"17",@"19"],
+            //2018075
+            //2018076
+            @[@"08",@"49",@"06",@"41",@"29",@"38",@"02"],
+            @[@"05",@"08",@"01",@"07",@"30",@"33",@"22"],
+            @[@"33",@"13",@"07",@"36",@"22",@"27",@"45"],
+            @[@"41",@"06",@"36",@"48",@"10",@"32",@"47"],
+            @[@"25",@"42",@"12",@"16",@"23",@"40",@"20"],
+            //2018080
+            //2018081
+            @[@"37",@"14",@"15",@"13",@"44",@"38",@"40"],
+            @[@"37",@"32",@"17",@"27",@"16",@"02",@"12"],
+            @[@"37",@"46",@"49",@"32",@"44",@"22",@"38"],
+            @[@"43",@"11",@"07",@"26",@"05",@"30",@"17"],
+            @[@"36",@"43",@"46",@"24",@"27",@"44",@"30"],
+            //2018085
+            //2018086
+            @[@"05",@"11",@"35",@"34",@"45",@"03",@"28"],
+            @[@"37",@"34",@"04",@"23",@"15",@"48",@"30"],
+            @[@"21",@"46",@"47",@"04",@"39",@"25",@"12"],
+            @[@"10",@"08",@"34",@"11",@"20",@"21",@"13"],
+            @[@"49",@"47",@"11",@"01",@"25",@"38",@"37"],
+            //2018090
+            //2018091
+            @[@"38",@"49",@"37",@"32",@"43",@"42",@"24"],
+            @[@"41",@"27",@"09",@"29",@"16",@"13",@"37"],
+            @[@"02",@"47",@"14",@"42",@"37",@"24",@"20"],
+            @[@"40",@"03",@"10",@"47",@"28",@"18",@"04"],
+            @[@"14",@"38",@"12",@"30",@"22",@"44",@"34"],
+            //2018095
+            //2018096
+            @[@"04",@"03",@"48",@"28",@"31",@"19",@"27"],
+            @[@"26",@"46",@"18",@"30",@"36",@"09",@"02"],
+            @[@"44",@"23",@"21",@"15",@"04",@"46",@"13"],
+            @[@"10",@"20",@"45",@"35",@"26",@"13",@"37"],
+            @[@"44",@"05",@"36",@"47",@"04",@"33",@"13"],
+            //2018100
+            //2018101
+            @[@"30",@"49",@"26",@"38",@"17",@"33",@"47"],
+            @[@"41",@"46",@"07",@"09",@"12",@"18",@"33"],
+            @[@"38",@"45",@"47",@"31",@"49",@"36",@"37"],
+            @[@"14",@"20",@"41",@"39",@"22",@"48",@"35"],
+            @[@"06",@"04",@"48",@"11",@"37",@"33",@"41"],
+            //2018105
+            //2018106
+            @[@"11",@"18",@"32",@"23",@"48",@"09",@"26"],
+            @[@"17",@"06",@"40",@"26",@"41",@"05",@"46"],
+            @[@"40",@"32",@"31",@"02",@"23",@"13",@"30"],
+            @[@"14",@"20",@"22",@"24",@"05",@"48",@"04"],
+            @[@"48",@"49",@"17",@"14",@"30",@"46",@"36"],
+            //2018110
+            //2018111
+            @[@"38",@"31",@"37",@"34",@"35",@"09",@"16"],
+            @[@"13",@"49",@"28",@"18",@"23",@"33",@"19"],
+            @[@"34",@"35",@"45",@"19",@"13",@"46",@"27"],
+            @[@"49",@"35",@"39",@"44",@"10",@"02",@"08"],
+            @[@"45",@"18",@"44",@"07",@"27",@"09",@"15"],
+            //2018115
+            //2018116
+            @[@"42",@"19",@"29",@"07",@"39",@"09",@"41"],
+            @[@"43",@"24",@"08",@"34",@"21",@"14",@"01"],
+            @[@"45",@"07",@"11",@"19",@"46",@"32",@"37"],
+            @[@"22",@"42",@"13",@"25",@"10",@"40",@"05"],
+            @[@"36",@"44",@"17",@"20",@"34",@"06",@"15"],
+            //2018120
+            //2018121
+            @[@"20",@"25",@"27",@"29",@"06",@"13",@"21"],
+            @[@"45",@"01",@"15",@"05",@"39",@"47",@"43"],
+            @[@"10",@"42",@"34",@"04",@"07",@"22",@"38"],
             @[@"32",@"16",@"09",@"15",@"13",@"20",@"12"],
             @[@"44",@"19",@"24",@"38",@"39",@"04",@"46"],
             //2018125
@@ -748,9 +892,41 @@
             @[@"20",@"19",@"13",@"02",@"10",@"24",@"17"],
             @[@"13",@"25",@"15",@"46",@"30",@"40",@"26"],
             @[@"33",@"34",@"20",@"30",@"07",@"44",@"46"],
-            @[@"18",@"06",@"23",@"46",@"31",@"17",@"44"]
-            //2019124
+            @[@"18",@"06",@"23",@"46",@"31",@"17",@"44"],
+            @[@"03",@"13",@"31",@"49",@"02",@"18",@"14"],
+            //2019125
+            //2019126
+            @[@"23",@"47",@"28",@"44",@"39",@"10",@"13"],
+            @[@"01",@"24",@"13",@"12",@"42",@"04",@"48"],
+            @[@"03",@"05",@"10",@"35",@"38",@"04",@"07"],
+            @[@"46",@"28",@"20",@"35",@"01",@"30",@"15"],
+            @[@"42",@"25",@"45",@"15",@"05",@"09",@"38"],
+            //2019130
+            //2019131
+            @[@"22",@"23",@"36",@"41",@"29",@"44",@"02"],
+            @[@"10",@"40",@"01",@"49",@"24",@"18",@"07"],
+            @[@"15",@"23",@"45",@"01",@"47",@"29",@"06"],
+            @[@"02",@"23",@"31",@"16",@"06",@"08",@"01"],
+            @[@"47",@"25",@"30",@"26",@"14",@"32",@"04"],
+            //2019135
+            //2019136
+            @[@"11",@"35",@"28",@"06",@"12",@"05",@"17"],
+            @[@"32",@"39",@"49",@"21",@"35",@"06",@"15"],
+            @[@"02",@"08",@"28",@"04",@"06",@"29",@"05"],
+            @[@"41",@"34",@"30",@"23",@"20",@"03",@"47"],
+            @[@"35",@"31",@"22",@"24",@"39",@"28",@"12"],
+            //2019140
+            //2019141
+            @[@"11",@"24",@"26",@"22",@"41",@"42",@"02"],
+            @[@"23",@"11",@"30",@"14",@"32",@"05",@"20"],
+            @[@"27",@"25",@"36",@"31",@"22",@"01",@"47"],
+            @[@"28",@"10",@"18",@"20",@"05",@"33",@"17"],
+            //2019144
+            //202001
+            @[@"37",@"29",@"15",@"34",@"30",@"17",@"40"],
+            @[@"27",@"24",@"37",@"25",@"31",@"01",@"08"],
         ];
+        //    @[@"",@"",@"",@"",@"",@"",@""],
 //        _historyNumbers = @[
 //            @[@"01",@"02",@"03",@"04",@"05",@"06",@"07"],
 //            @[@"01",@"02",@"03",@"04",@"05",@"06",@"07"],
@@ -802,7 +978,11 @@
         @"02",@"07",@"37",@"41",@"04",
         @"33",@"44",@"16",@"44",@"49",
         @"25",@"32",@"24",@"48",@"17",
-        @"26",@"46",@"44"];
+        @"26",@"46",@"44",@"14",@"13",
+        @"48",@"07",@"15",@"38",@"02",
+        @"07",@"06",@"01",@"04",@"17",
+        @"15",@"05",@"47",@"12",@"02",
+        @"20",@"47",@"17",@"40"];
     }
     return _openNumbers;
 }
